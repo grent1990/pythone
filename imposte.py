@@ -11,11 +11,11 @@ FASCIA_2 = 50000
 while reddito <= 0:
         print("Il valore inserito non è valido.")
         reddito = float(input("Inserisci il tuo reddito: "))
-if reddito <= 28000:
+if reddito <= FASCIA_1:
     imposta = reddito * ALIQUOTA_1
-elif reddito <= 50000:
+elif reddito <= FASCIA_2:
     imposta = (FASCIA_1 * ALIQUOTA_1) + (reddito - FASCIA_1) * ALIQUOTA_2
-elif reddito > 50000:
+elif reddito > FASCIA_2:
             imposta = (FASCIA_1 * ALIQUOTA_1) + ((FASCIA_2 - FASCIA_1) * ALIQUOTA_2) + ((reddito - FASCIA_2) * ALIQUOTA_3)
 reddito_netto = reddito - imposta
 print ("Il tuo reddito netto è: ", reddito_netto)
